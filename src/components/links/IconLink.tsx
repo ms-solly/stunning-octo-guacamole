@@ -3,10 +3,7 @@ import * as React from 'react';
 import { IconType } from 'react-icons';
 
 import { cn } from '../../lib/utils';
-
-import UnstyledLink, {
-  UnstyledLinkProps,
-} from '../links/UnstyledLink';
+import UnstyledLink, { UnstyledLinkProps } from '../links/UnstyledLink';
 
 type IconLinkVariant = 'primary' | 'outline' | 'ghost' | 'light' | 'dark';
 
@@ -30,7 +27,7 @@ const IconLink = React.forwardRef<HTMLAnchorElement, IconLinkProps>(
       classNames,
       ...rest
     },
-    ref
+    ref,
   ) => {
     return (
       <UnstyledLink
@@ -79,14 +76,16 @@ const IconLink = React.forwardRef<HTMLAnchorElement, IconLinkProps>(
           ],
           //#endregion  //*======== Variants ===========
           'disabled:cursor-not-allowed',
-          className
+          className,
         )}
         {...rest}
       >
         {Icon && <Icon size='1em' className={cn(classNames?.icon)} />}
       </UnstyledLink>
     );
-  }
+  },
 );
+
+IconLink.displayName = 'IconLink';
 
 export default IconLink;

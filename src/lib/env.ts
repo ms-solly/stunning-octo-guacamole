@@ -13,7 +13,6 @@ const envVariables = z.object({
 envVariables.parse(process.env);
 
 declare global {
-  namespace NodeJS {
-  }
+  namespace NodeJS {}
 }
 export {};

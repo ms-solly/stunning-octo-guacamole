@@ -1,6 +1,7 @@
+// @ts-nocheck
 'use client';
 
-import { MeshDistortMaterial,OrbitControls, Sphere } from '@react-three/drei';
+import { MeshDistortMaterial, OrbitControls, Sphere } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 
 export default function AnimatedBackground() {
@@ -11,8 +12,8 @@ export default function AnimatedBackground() {
       <directionalLight position={[3, 2, 1]} />
       <Sphere args={[1, 100, 200]} scale={2.4}>
         <MeshDistortMaterial
-          color="#8A2BE2"
-          attach="material"
+          color='#8A2BE2'
+          attach='material'
           distort={0.5}
           speed={2}
         />

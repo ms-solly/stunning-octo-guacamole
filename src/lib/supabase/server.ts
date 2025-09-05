@@ -1,5 +1,5 @@
-import { type CookieOptions,createServerClient } from '@supabase/ssr'
-import { cookies } from 'next/headers'
+import { type CookieOptions, createServerClient } from '@supabase/ssr';
+import { cookies } from 'next/headers';
 
 export default function createClient(cookieStore: ReturnType<typeof cookies>) {
   return createServerClient(
@@ -8,15 +8,15 @@ export default function createClient(cookieStore: ReturnType<typeof cookies>) {
     {
       cookies: {
         async get(name: string) {
-          return (await cookieStore).get(name)?.value
+          return (await cookieStore).get(name)?.value;
         },
         async set(name: string, value: string, options: CookieOptions) {
-          (await cookieStore).set({ name, value, ...options })
+          (await cookieStore).set({ name, value, ...options });
         },
         async remove(name: string, options: CookieOptions) {
-          (await cookieStore).set({ name, value: '', ...options })
+          (await cookieStore).set({ name, value: '', ...options });
         },
       },
-    }
-  )
+    },
+  );
 }

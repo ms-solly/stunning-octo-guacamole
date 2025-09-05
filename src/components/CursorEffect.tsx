@@ -91,7 +91,7 @@ function RippleEffectPlane() {
       plane.uniforms.time.value++;
       plane.uniforms.displacement.value = Math.max(
         0,
-        plane.uniforms.displacement.value - 0.005
+        plane.uniforms.displacement.value - 0.005,
       );
     }
   };
