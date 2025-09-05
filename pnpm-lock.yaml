@@ -1,4 +1,8 @@
 lockfileVersion: '9.0'
+buildScripts:
+  "@tailwindcss/oxide": true
+  "sharp": true
+  "unrs-resolver": true
 
 settings:
   autoInstallPeers: true
