@@ -15,7 +15,7 @@
     "test": "jest",
     "format": "prettier -w .",
     "format:check": "prettier -c .",
-    "postbuild": "next-sitemap --config next-sitemap.config.js",
+    "postbuild": "next-sitemap --config next-sitemap.config.cjs",
     "prepare": "husky install"
   },
   "dependencies": {
