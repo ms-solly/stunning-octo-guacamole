@@ -14,6 +14,11 @@ export default [
   ...tseslint.configs.recommended,
   pluginReactConfig,
   {
+    settings: {
+      react: {
+        version: 'detect',
+      },
+    },
     plugins: {
       '@next/next': nextPlugin,
       'simple-import-sort': simpleImportSort,
